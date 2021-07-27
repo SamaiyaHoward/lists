@@ -1,0 +1,29 @@
+name:
+date:
+
+1 - What is a List?
+
+
+2 - How can you create an empty list? What about a pre-populated list?
+
+
+3 - How do you access a list?
+
+
+4 - How do you add items to a list? Remove items?
+
+
+5 - What happens if you got out of bounds with a list?
+
+
+6 - Why are lists useful to us, as opposed to strings?
+
+
+7 - Where a position in a string represents a character, a position in a list represents a ______?
+
+
+8 - Which of the methods for lists return a value? Which methods for lists operate on the list (change it)?
+Documentation: https://www.w3schools.com/python/python_lists_methods.asp
+
+
+9 - Why might you start with an empty list when writing a program?
