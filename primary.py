@@ -1,5 +1,5 @@
-# name:
-# author:
+# name: Samaiya Howard
+# date: July 27, 2021 
 
 # -------------------- Section 1 ------------------------- #
 # ------------------ List Creation ----------------------- #
@@ -15,7 +15,10 @@ print('Creating an Empty List' '\n')
 #   2. Print the lists.
 #
 # WRITE CODE BELOW
-
+empty_list = list()
+list2 = []
+print(empty_list)
+print(list2)
 
 print('\n' 'Creating a Pre-Populated List' '\n')
 # 2. Creating a Pre-Populated List
@@ -34,7 +37,18 @@ print('\n' 'Creating a Pre-Populated List' '\n')
 #
 # WRITE CODE BELOW
 integers = [1, 15, -4, -26, 34]
-
+print(integers)
+floats = [17.5, 89.9, 11.0, 3.14, -4.75]
+print(floats)
+booleans = [4 == 4.0, 7.14 != 7.14, 6.38 <= 7.38]
+print(booleans)
+animals = ['cat', 'owl', 'lion']
+print(animals)
+diff_data_types = [100, 'digits', 3.14]
+print(diff_data_types)
+mj = 'Michael Jackson'
+star_name = list(mj)
+print(star_name)
 
 # -------------------- Section 2 ------------------------- #
 # ---------------- List Modification --------------------- #
@@ -55,6 +69,15 @@ print('Accessing and Modifying a List' '\n')
 #
 # WRITE CODE BELOW
 integers[2] = 44
+print(integers)
+floats[4] = 77.5
+print(floats)
+booleans[0] = not booleans[0]
+print(booleans)
+animals[1] = "wolf"
+print(animals)
+diff_data_types[2] = 2.54
+print(diff_data_types)
 
 
 print('\n' 'Append, Insert, and Remove' '\n')
@@ -72,8 +95,17 @@ print('\n' 'Append, Insert, and Remove' '\n')
 #   1.a has been done for you.
 #
 # WRITE CODE BELOW
-integers.append(25)
 
+integers.append(25)
+print(integers)
+floats.append(9.99)
+print(floats)
+booleans.remove(7.14 != 7.14)
+print(booleans)
+animals.insert(2,'robin')
+print(animals)
+diff_data_types.insert(len(diff_data_types) - 1 // 2, False)
+print(diff_data_types)
 
 print('\n' 'List Concatenation' '\n')
 # 3. List Concatenation
@@ -99,6 +131,10 @@ print(
     f'example_duplication | {example_duplication}' '\n'
 )
 
+int_float_concat = integers + floats
+print('integers and floats list Concatenation >>',int_float_concat)
+animals_duplicated = animals * 3
+print('animals duplication >>', animals_duplicated)
 
 # -------------------- Section 3 ------------------------- #
 # --------------------- Looping -------------------------- #
@@ -115,7 +151,10 @@ print('Looping' '\n')
 #   An example has been shown below:
 #
 # WRITE CODE BELOW
-
+for i in range(len(animals)):
+    print(animals[i])
+for item in animals:
+    print(item)
 
 # -------------------- Section 4 ------------------------- #
 # ------------------ Comprehension ----------------------- #
@@ -139,12 +178,22 @@ print('Dice - Statistics' '\n')
 # WRITE CODE BELOW
 from random import randint
 
-size = 5
 rolls = []
+size = 1
+def dice_roll(rolls):
+    for size in [5, 10, 100, 1000]:
+        rolls = []
+        rolls.append(randint(1,6))
 
-for i in range(size):
-    pass  # finish the loop
-
-print(f'rolls | {rolls}')
-print(f'1\t| total - {rolls.count(1)}\t\t| rate of appearance - {"{:.2%}".format(rolls.count(1) / size)}')
+    print(f'rolls | {rolls}')
+    print(f'1\t| total - {rolls.count(1)}\t\t| rate of appearance - {"{:.2%}".format(rolls.count(1) / size)}')
+    print(f'2\t| total - {rolls.count(2)}\t\t| rate of appearance - {"{:.2%}".format(rolls.count(2) / size)}')
+    print(f'3\t| total - {rolls.count(3)}\t\t| rate of appearance - {"{:.2%}".format(rolls.count(3) / size)}')
+    print(f'4\t| total - {rolls.count(4)}\t\t| rate of appearance - {"{:.2%}".format(rolls.count(4) / size)}')
+    print(f'5\t| total - {rolls.count(5)}\t\t| rate of appearance - {"{:.2%}".format(rolls.count(5) / size)}')
+    print(f'6\t| total - {rolls.count(6)}\t\t| rate of appearance - {"{:.2%}".format(rolls.count(6) / size)}')
+dice_roll(rolls)
 # finish the rest!
+
+
+
